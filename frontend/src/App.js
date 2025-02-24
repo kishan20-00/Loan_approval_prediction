@@ -50,6 +50,7 @@ function App() {
                             <MenuItem value="RENT">RENT</MenuItem>
                             <MenuItem value="OWN">OWN</MenuItem>
                             <MenuItem value="MORTGAGE">MORTGAGE</MenuItem>
+                            <MenuItem value="OTHER">OTHER</MenuItem>
                         </TextField>
 
                         <TextField type="number" label="Employment Length (years)" name="person_emp_length" onChange={handleChange} required />
@@ -89,10 +90,14 @@ function App() {
                 </form>
 
                 {prediction !== null && (
-                    <Typography variant="h6" color="success.main" sx={{ marginTop: 2 }}>
-                        Predicted Loan Status: {prediction}
+                    <Typography 
+                        variant="h6" 
+                        sx={{ marginTop: 2, color: prediction === 1 ? "red" : "green", fontWeight: "bold" }}
+                    >
+                        {prediction === 1 ? "Fraud" : "Safe"}
                     </Typography>
                 )}
+
                 {error && (
                     <Typography variant="h6" color="error" sx={{ marginTop: 2 }}>
                         {error}
