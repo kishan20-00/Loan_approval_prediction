@@ -75,8 +75,27 @@ function App() {
                         </TextField>
 
                         <TextField type="number" label="Loan Amount" name="loan_amnt" onChange={handleChange} required />
-                        <TextField type="number" step="0.01" label="Loan Interest Rate" name="loan_int_rate" onChange={handleChange} required />
-                        <TextField type="number" step="0.01" label="Loan Percent Income" name="loan_percent_income" onChange={handleChange} required />
+                        
+                        {/* Updated to allow decimal values */}
+                        <TextField 
+                            type="number" 
+                            inputMode="decimal" 
+                            step="any" 
+                            label="Loan Interest Rate" 
+                            name="loan_int_rate" 
+                            onChange={handleChange} 
+                            required 
+                        />
+
+                        <TextField 
+                            type="number" 
+                            inputMode="decimal" 
+                            step="any" 
+                            label="Loan Percent Income" 
+                            name="loan_percent_income" 
+                            onChange={handleChange} 
+                            required 
+                        />
 
                         <TextField select label="Default on File" name="cb_person_default_on_file" onChange={handleChange} required>
                             <MenuItem value="Y">Yes</MenuItem>
