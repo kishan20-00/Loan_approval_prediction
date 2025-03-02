@@ -2,7 +2,7 @@
 
 ## Prerequisites
 Before running the executable file, ensure you have the following installed on your Windows machine:
-- [Python 3.8+](https://www.python.org/downloads/)
+- [Python 3.11+]([https://www.python.org/downloads/](https://www.python.org/downloads/release/python-3119/))
 - [Node.js & npm](https://nodejs.org/)
 
 ## Installation Steps
